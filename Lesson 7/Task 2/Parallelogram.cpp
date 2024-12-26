@@ -1,0 +1,7 @@
+#include "Parallelogram.h"
+
+
+Parallelogram::Parallelogram(int sideA, int sideB, int angleA, int angleB) :
+	Quadrangle("ֿאנאככוכמדנאלל", sideA, sideB, sideA, sideB, angleA, angleB, angleA, angleB)
+{
+}
