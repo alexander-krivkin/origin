@@ -1,3 +1,0 @@
-C:/Users/krivk/OneDrive/Рабочий стол/Task 2/build/CMakeFiles/my_second_cmake_program.dir
-C:/Users/krivk/OneDrive/Рабочий стол/Task 2/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/krivk/OneDrive/Рабочий стол/Task 2/build/CMakeFiles/ZERO_CHECK.dir

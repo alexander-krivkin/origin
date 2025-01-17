@@ -1,3 +1,0 @@
-C:/Users/krivk/Dropbox/NETOLOGY/CPPM/Lesson 9/Task 1/build/CMakeFiles/my_first_cmake_program.dir
-C:/Users/krivk/Dropbox/NETOLOGY/CPPM/Lesson 9/Task 1/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/krivk/Dropbox/NETOLOGY/CPPM/Lesson 9/Task 1/build/CMakeFiles/ZERO_CHECK.dir
