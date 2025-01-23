@@ -3,15 +3,15 @@
 
 namespace ak
 {
-	float HighSpeedCamel::getTravelTime(int distance) const
+	double HighSpeedCamel::getTravelTime(int distance) const
 	{
 		int velocity{ 40 };
 		int travelTimeToHalt{ 10 };
 
-		float pureTravelTime = static_cast<float>(distance) / velocity;
-		int haltNum = pureTravelTime / travelTimeToHalt;
+		double pureTravelTime = static_cast<double>(distance / velocity);
+		int haltNum = static_cast<int>(pureTravelTime / travelTimeToHalt);
 
-		float pureRestTime{};
+		double pureRestTime{};
 		if (haltNum == 1)
 		{
 			pureRestTime = 5.0f;
@@ -25,7 +25,7 @@ namespace ak
 			pureRestTime = 5.0f + 6.5f + 8.0f * (haltNum - 2);
 		}
 
-		float travelTime = pureTravelTime + pureRestTime;
+		double travelTime = pureTravelTime + pureRestTime;
 
 		return travelTime;
 	}

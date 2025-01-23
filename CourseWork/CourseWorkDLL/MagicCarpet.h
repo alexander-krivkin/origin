@@ -12,7 +12,7 @@ namespace ak
 		MagicCarpet() : AirTransport("Ковёр-самолёт") {}
 		~MagicCarpet() = default;
 		Transports getType() const override { return Transports::MAGIC_CARPET; }
-		float getTravelTime(int distance) const override;
+		double getTravelTime(int distance) const override;
 	};
 }
 

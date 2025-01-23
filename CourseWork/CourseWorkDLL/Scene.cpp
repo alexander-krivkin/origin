@@ -1,4 +1,5 @@
 #include <string>
+#include <cmath>
 
 #include "Scene.h"
 #include "Errors.h"
@@ -114,7 +115,7 @@ namespace ak
 
 	std::string Scene::getRegisteredTransportTravelTimes(int distance) const
 	{
-		float rawTravelTimeArr[7]{};
+		double rawTravelTimeArr[7]{};
 		int indiciesArr[7]{};
 
 		for (int idx{}; idx <= currentIndex; ++idx)
@@ -129,7 +130,7 @@ namespace ak
 			{
 				if (rawTravelTimeArr[j] > rawTravelTimeArr[j + 1])
 				{
-					float tmpTravelTime = rawTravelTimeArr[j];
+					double tmpTravelTime = rawTravelTimeArr[j];
 					rawTravelTimeArr[j] = rawTravelTimeArr[j + 1];
 					rawTravelTimeArr[j + 1] = tmpTravelTime;
 
@@ -142,13 +143,22 @@ namespace ak
 
 		std::string travelTimes{};
 
+		double travelTime{};
+		std::string travelTimeStr{};
 		for (int idx{}; idx <= currentIndex; ++idx)
 		{
+			travelTime = round(100 * transport[indiciesArr[idx]]->getTravelTime(distance)) / 100;
+			travelTimeStr = std::to_string(travelTime);
+			travelTimeStr.pop_back();
+			travelTimeStr.pop_back();
+			travelTimeStr.pop_back();
+			travelTimeStr.pop_back();
+
 			travelTimes += std::to_string(idx + 1);
 			travelTimes += ". ";
 			travelTimes += transport[indiciesArr[idx]]->getName();
 			travelTimes += ". Время: ";
-			travelTimes += std::to_string(transport[indiciesArr[idx]]->getTravelTime(distance));
+			travelTimes += travelTimeStr;
 			travelTimes += "\n";
 		}
 

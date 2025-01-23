@@ -12,7 +12,7 @@ namespace ak
 		HighSpeedCamel() : LandTransport("Верблюд-быстроход") {}
 		~HighSpeedCamel() = default;
 		Transports getType() const override { return Transports::HIGH_SPEED_CAMEL; }
-		float getTravelTime(int distance) const override;
+		double getTravelTime(int distance) const override;
 	};
 }
 

@@ -12,7 +12,7 @@ namespace ak
 		Centaur() : LandTransport("Кентавр") {}
 		~Centaur() = default;
 		Transports getType() const override { return Transports::CAMEL; }
-		float getTravelTime(int distance) const override;
+		double getTravelTime(int distance) const override;
 	};
 }
 

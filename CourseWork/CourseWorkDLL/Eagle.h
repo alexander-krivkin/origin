@@ -12,7 +12,7 @@ namespace ak
 		Eagle() : AirTransport("Îð¸ë") {}
 		~Eagle() = default;
 		Transports getType() const override { return Transports::EAGLE; }
-		float getTravelTime(int distance) const override;
+		double getTravelTime(int distance) const override;
 	};
 }
 

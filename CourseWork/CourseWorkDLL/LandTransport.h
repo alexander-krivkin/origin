@@ -13,7 +13,7 @@ namespace ak
 		explicit LandTransport(std::string name) : Transport(name) {}
 		virtual ~LandTransport() = default;
 		virtual Transports getType() const override { return Transports::NONE; }
-		virtual float getTravelTime(int distance) const override;
+		virtual double getTravelTime(int distance) const override;
 	};
 }
 

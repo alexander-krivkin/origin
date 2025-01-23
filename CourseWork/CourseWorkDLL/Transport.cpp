@@ -3,7 +3,7 @@
 
 namespace ak
 {
-	float Transport::getTravelTime(int distance) const
+	double Transport::getTravelTime(int distance) const
 	{
 		return 0.0f;
 	}

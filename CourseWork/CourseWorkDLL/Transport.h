@@ -1,6 +1,10 @@
 #ifndef AK_TRANSPORT_H
 #define AK_TRANSPORT_H
 
+#pragma warning (disable : 4100 )
+#pragma warning (disable : 4251 )
+#pragma warning (disable : 4275 )
+
 #ifdef COURSEWORKDLL_EXPORTS
 #define COURSEWORKDLL_API __declspec(dllexport)
 #else
@@ -32,7 +36,7 @@ namespace ak
 		virtual ~Transport() = default;
 		std::string getName() const { return name; }
 		virtual Transports getType() const { return Transports::NONE; }
-		virtual float getTravelTime(int distance) const;
+		virtual double getTravelTime(int distance) const;
 
 	private:
 		std::string name;

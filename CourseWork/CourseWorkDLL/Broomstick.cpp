@@ -3,13 +3,12 @@
 
 namespace ak
 {
-	float Broomstick::getTravelTime(int distance) const
+	double Broomstick::getTravelTime(int distance) const
 	{
 		int velocity{ 20 };
-		int distanceReductionPercent = distance / 1000;
+		int distanceReductionPercent = static_cast<int>(distance / 1000);
 
-		float travelTime = 0.01 * (100 - distanceReductionPercent) * distance /
-			velocity;
+		double travelTime = 0.01f * (100 - distanceReductionPercent) * distance / velocity;
 
 		return travelTime;
 	}

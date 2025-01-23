@@ -12,7 +12,7 @@ namespace ak
 		Broomstick() : AirTransport("Метла") {}
 		~Broomstick() = default;
 		Transports getType() const override { return Transports::BROOMSTICK; }
-		float getTravelTime(int distance) const override;
+		double getTravelTime(int distance) const override;
 	};
 }
 

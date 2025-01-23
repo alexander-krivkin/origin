@@ -3,7 +3,7 @@
 
 namespace ak
 {
-	float MagicCarpet::getTravelTime(int distance) const
+	double MagicCarpet::getTravelTime(int distance) const
 	{
 		int velocity{ 10 };
 
@@ -21,8 +21,7 @@ namespace ak
 			distanceReductionPercent = 3;
 		}
 
-		float travelTime = 0.01 * (100 - distanceReductionPercent) * distance /
-			velocity;
+		double travelTime = 0.01f * (100 - distanceReductionPercent) * distance / velocity;
 
 		return travelTime;
 	}

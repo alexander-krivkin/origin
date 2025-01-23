@@ -3,17 +3,17 @@
 
 namespace ak
 {
-	float Centaur::getTravelTime(int distance) const
+	double Centaur::getTravelTime(int distance) const
 	{
 		int velocity{ 15 };
 		int travelTimeToHalt{ 8 };
 
-		float pureTravelTime = static_cast<float>(distance) / velocity;
-		int haltNum = pureTravelTime / travelTimeToHalt;
+		double pureTravelTime = static_cast<double>(distance / velocity);
+		int haltNum = static_cast<int>(pureTravelTime / travelTimeToHalt);
 
-		float pureRestTime = 2.0f * haltNum;
+		double pureRestTime = 2.0f * haltNum;
 
-		float travelTime = pureTravelTime + pureRestTime;
+		double travelTime = pureTravelTime + pureRestTime;
 
 		return travelTime;
 	}

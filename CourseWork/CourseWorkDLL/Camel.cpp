@@ -3,16 +3,16 @@
 
 namespace ak
 {
-	float Camel::getTravelTime(int distance) const
+	double Camel::getTravelTime(int distance) const
 	{
 		int velocity{ 10 };
 		int travelTimeToHalt{ 30 };
 
-		float pureTravelTime = static_cast<float>(distance) / velocity;
-		int haltNum = pureTravelTime / travelTimeToHalt;
+		double pureTravelTime = static_cast<double>(distance / velocity);
+		int haltNum = static_cast<int>(pureTravelTime / travelTimeToHalt);
 		if (!(distance % (velocity * travelTimeToHalt))) --haltNum;
 
-		float pureRestTime{};
+		double pureRestTime{};
 		if (haltNum == 1)
 		{
 			pureRestTime = 5.0f;
@@ -22,7 +22,7 @@ namespace ak
 			pureRestTime = 5.0f + 8.0f * (haltNum - 1);
 		}
 
-		float travelTime = pureTravelTime + pureRestTime;
+		double travelTime = pureTravelTime + pureRestTime;
 
 		return travelTime;
 	}
